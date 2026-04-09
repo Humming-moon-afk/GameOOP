@@ -22,6 +22,9 @@ public class Mage extends Player implements Fireball {
         System.out.println(e.name + " hat nur noch " + e.vitality + " HP übrig");
         }
     }
+    public void getIntelligence() {
+        System.out.println("Intelligence of " + getName() + " is: " + this.intelligence);
+    }
     @Override
     public void levelUp() {
         super.levelUp();

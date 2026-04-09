@@ -28,5 +28,6 @@ public class Main {
         milian2Acc.castFireball(milian);
         milian2Acc.getLevel();
         milian2Acc.drinkManaPotion();
+        milian2Acc.getIntelligence();
     }
 }

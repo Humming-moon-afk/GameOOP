@@ -41,7 +41,8 @@ public class Player extends Entity {
     }
     public void expLeft() {
         int missingXp = getXpNextLevel() - getXp();
-        System.out.println(getName() + "fehlen noch " + missingXp + " für Level " + getLevel());
+        int nextLevel = getLevel()+1;
+        System.out.println(getName() + "fehlen noch " + missingXp + " XP für Level " + nextLevel);
     }
     public void drinkManaPotion() {
         if(getMana() == 100) {
