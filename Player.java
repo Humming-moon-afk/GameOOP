@@ -43,4 +43,12 @@ public class Player extends Entity {
         int missingXp = getXpNextLevel() - getXp();
         System.out.println(getName() + "fehlen noch " + missingXp + " für Level " + getLevel());
     }
+    public void drinkManaPotion() {
+        if(getMana() == 100) {
+            System.out.println("Mana ist schon voll!");
+        } else {
+        this.mana = 100;
+        System.out.println(getName() + " trinkt einen trank und hat nun " + getMana() + " Mana");
+        }
+    }
 }
