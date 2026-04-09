@@ -9,4 +9,10 @@ public class Player extends Entity {
     public void sayHello() {
         System.out.println("Hello");
     }
+    public int getLevel() {
+        return level;
+    }
+    public int getMana() {
+        return mana;
+    }
 }
