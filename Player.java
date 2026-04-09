@@ -32,7 +32,7 @@ public class Player extends Entity {
             levelUp();
         }
     }
-    private void levelUp() {
+    protected void levelUp() {
         this.currentExp -= this.expToNextLevel;
         this.level++;
         this.expToNextLevel +=20;
