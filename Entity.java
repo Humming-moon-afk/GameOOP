@@ -6,5 +6,17 @@ public abstract class Entity {
         this.name = name;
         this.position = position;
         this.vitality = vitality;
+        /**
+         * Getters
+         */
+    } 
+    public String getName() {
+        return name;
+    }
+    public double getPosition() {
+        return position;
+    }
+    public int getVitality() {
+        return vitality;
     }
 }
