@@ -1,6 +1,8 @@
 public class Mage extends Player implements Fireball {
+    private int intelligence;
     public Mage(String name, double position, int vitality, int mana, int level) {
         super(name, vitality, position, level, mana);
+        this.intelligence = 20;
     }
     public void castFireball(Entity e) {
         if (!e.isAlive) {
@@ -8,7 +10,8 @@ public class Mage extends Player implements Fireball {
             return;
         }
         mana -= 50;
-        e.vitality -= 50;
+        int damage = 50 + this.intelligence;
+        e.vitality -= damage;
         if (e.vitality < 0) {
             e.vitality = 0;
             e.isAlive = false;
