@@ -3,11 +3,17 @@ public class Mage extends Player implements Fireball {
         super(name, vitality, position, level, mana);
     }
     public void castFireball(Entity e) {
-        mana-=50;
-        e.vitality-=50;
-        if(e.vitality <= 0) {
+        if (!e.isAlive) {
+            System.out.println(e.name + " ist bereits tot!");
+            return;
+        }
+        mana -= 50;
+        e.vitality -= 50;
+        if (e.vitality < 0) {
             e.vitality = 0;
-            System.out.println(e.name + " wurde besiegt");
+            e.isAlive = false;
+            System.out.println(e.name + " ist gestorben!");
+            gainExp(50);
         } else {
         System.out.println(this.name + " schleudert einen Feuerball");
         System.out.println(e.name + " hat nur noch " + e.vitality + " HP übrig");

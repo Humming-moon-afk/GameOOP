@@ -6,7 +6,7 @@ public class Main {
         List<Entity> worldObjects = new ArrayList<>();
 
         
-        Player milian = new Player("Milianimus", 100, 0.0, 1, 100);
+        Player milian = new Player("Milianimus", 30, 0.0, 1, 100);
         
         Building spawn = new Building("Spawn", 1000, 50.0, "System");
         
@@ -21,10 +21,11 @@ public class Main {
             System.out.println("Entity gefunden: " + e.name + " an Position: " + e.position);
         }
 
-        System.out.println("\n--- Interaktionen ---");
-        
-        milian.sayHello(); // Aus der Player-Klasse
-        
-        milian2Acc.castFireball(milian); 
+        System.out.println("\n--- Interaktionen ---");        
+        milian2Acc.castFireball(milian);
+        milian2Acc.expLeft();
+        milian2Acc.getLevel();
+        milian2Acc.castFireball(milian);
+        milian2Acc.getLevel();
     }
 }
