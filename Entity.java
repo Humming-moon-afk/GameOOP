@@ -21,4 +21,7 @@ public abstract class Entity {
     public int getVitality() {
         return vitality;
     }
+    public boolean getAliveStatus() {
+        return isAlive;
+    }
 }

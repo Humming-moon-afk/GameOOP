@@ -12,7 +12,7 @@ public class Mage extends Player implements Fireball, Freeze {
         mana -= 50;
         int damage = 50 + this.intelligence;
         e.vitality -= damage;
-        if (e.vitality < 0) {
+        if (e.vitality <= 0) {
             e.vitality = 0;
             e.isAlive = false;
             System.out.println(e.name + " ist gestorben!");
@@ -38,7 +38,7 @@ public class Mage extends Player implements Fireball, Freeze {
         mana -=30;
         int damage = 30 + this.intelligence / 2;
         e.vitality -= damage;
-        if (e.vitality < 0) {
+        if (e.vitality <= 0) {
             e.vitality = 0;
             e.isAlive = false;
             System.out.println(e.name + " ist gestorben!");
