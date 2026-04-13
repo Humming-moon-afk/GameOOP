@@ -12,9 +12,12 @@ public class Main {
         
         Mage milian2Acc = new Mage("Mili", 10.0, 80, 200, 5);
 
+        Mage kim = new Mage("Redhead", 50, 10000, 2000, 67);
+
         worldObjects.add(milian);
         worldObjects.add(spawn);
         worldObjects.add(milian2Acc);
+        worldObjects.add(kim);
 
         System.out.println("--- Objekte derzeit in der Welt ---");
         for (Entity e : worldObjects) {
@@ -29,5 +32,12 @@ public class Main {
         milian2Acc.getLevel();
         milian2Acc.drinkManaPotion();
         milian2Acc.getIntelligence();
+        kim.getLevel();
+        milian2Acc.castFreeze(kim);
+        kim.castFireball(milian2Acc);
+        kim.castFireball(milian2Acc);
+        kim.levelUp();
+        kim.levelUp();
+
     }
 }
